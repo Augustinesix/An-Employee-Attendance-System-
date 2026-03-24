@@ -1,0 +1,89 @@
+* { box-sizing: border-box; }
+body { font-family: Arial; margin: 0; background: #f4f6f9; 
+height: 100vh;
+}
+
+header { background: #1f2d3d; color: white; padding: 15px; text-align: center; }
+
+/* NAVBAR */
+.nav {
+  /* display: flex; */
+  justify-content: center;
+  gap: 10px;
+  background: #34495e;
+  padding: 10px;
+  height: 100px;
+}
+
+.nav button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  background: #27ae60;
+  color: white;
+  border-radius: 5px;
+}
+
+.container { padding: 15px; max-width: 1100px; margin: auto; }
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+input, button, select {
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.hidden { display: none; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px; border-bottom: 1px solid #ddd; }
+th { background: #2c3e50; color: white; }
+
+.status-present { color: green; }
+.status-absent { color: red; }
+
+.search-box {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+
+
+
+
+.message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.message.error {
+  background: #e74c3c;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+.btn1 { 
+    width: 150px; background-color: #27ae60; margin-left: 10px; border: none; border-radius: 5px; color: white;
+}
+
+button:hover {
+    background-color: #333;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance System</title>
+ <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+
+<header style="font-size: 22px; padding:20px;">Attendance System</header>
+
+  <div class="container">
+
+    
+<!-- EMPLOYEE PANEL -->
+<div id="employeePanel">
+  <div id="messageBox" class="message hidden"></div>
+<div class="card">
+<h3>Mark Attendance</h3>
+
+<input type="text" id="searchName" placeholder="Enter your name" oninput="updateUI()" style="width: 500px;">
+
+<button class="btn1" id="checkInBtn" onclick="checkIn()">Check In</button>
+<button class="btn1"
+id="checkOutBtn" onclick="checkOut()">Check Out</button>
+<button class="btn1"id="absentBtn" onclick="markAbsent()">Absent       </button>
+
+</div>
+</div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
