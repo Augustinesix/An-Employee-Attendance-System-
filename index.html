@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+<!-- NAVBAR -->
+<div class="nav">
+    <h1 style="color: white; font-size: 22px; position: absolute;">ADMIN PANEL</h1>
+  <div style="max-width:  200px; float: right;display: flex; margin-right: 50px; "><button onclick="showAdmin()" style="padding: 20px; margin: 10px;">Dashboard</button>
+  <button onclick="showEmployees()" style="padding: 20px; margin: 10px;">View Employees</button>
+</div>
+  <!-- <button onclick="showEmployee()">Employee Panel</button> -->
+</div>
+<div id="messageBox" class="message hidden"></div>
+<div class="container">
+
+<!-- ADMIN DASHBOARD -->
+<div id="adminPanel">
+
+<div class="card">
+<h3>Add Employee</h3>
+<div style="display: flex;">
+   <input type="text" id="empName" placeholder="Enter employee name" style="width: 500px;">
+<button class="btn1" onclick="addEmployee()">Add Employee</button>
+</div>
+</div>
+<div class="card">
+<h3>Attendance Records</h3>
+
+<!-- SEARCH -->
+<div class="search-box" style="display: flex;">
+  <input type="text" id="searchNameAdmin" placeholder="Search Name" oninput="searchRecords()">
+  <input type="date" id="searchDateAdmin" style="width: 150px;" oninput="searchRecords()">
+  <input type="time" id="searchTimeAdmin" style="width: 150px;" oninput="searchRecords()">
+
+
+<button class="btn1" onclick="searchRecords()">Search</button>
+</div>
+
+
+
+<table style="margin-top: 20px;">
+<thead>
+<tr>
+<th>Name</th>
+<th>Date</th>
+<th>Status</th>
+<th>Check-in</th>
+<th>Check-out</th>
+</tr>
+</thead>
+<tbody id="adminTable"></tbody>
+</table>
+</div>
+
+</div>
+
+<!-- EMPLOYEE LIST -->
+<div id="employeeList" class="hidden">
+<div class="card">
+<h3>All Employees</h3>
+
+<table>
+<thead>
+<tr>
+<th>Employee Name</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody id="employeeTable"></tbody>
+</table>
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
